@@ -1,0 +1,256 @@
+/* fine styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --darkgrey: #1a1a1a;
+    --white: #fff;
+    --link: #A61C3C;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+     :root {
+        --displayScale: 2;
+        --pixel: 0.5px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min-device-pixel-ratio: 2.5),
+only screen and (min-resolution: 2.5dppx) {
+     :root {
+        --displayScale: 3;
+        --pixel: 0.34px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
+only screen and (min-device-pixel-ratio: 3.5),
+only screen and (min-resolution: 3.5dppx) {
+     :root {
+        --displayScale: 4;
+        --pixel: 0.25px;
+    }
+}
+
+body {
+    background: hsla(39, 54%, 95%, 1);
+    background: linear-gradient(180deg, hsla(39, 54%, 95%, 1) 11%, hsla(30, 85%, 95%, 1) 93%);
+    background: -moz-linear-gradient(180deg, hsla(39, 54%, 95%, 1) 11%, hsla(30, 85%, 95%, 1) 93%);
+    background: -webkit-linear-gradient(180deg, hsla(39, 54%, 95%, 1) 11%, hsla(30, 85%, 95%, 1) 93%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9F4EB", endColorstr="#FDF2E7", GradientType=1);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+/* reset */
+
+* {
+    font: inherit;
+    line-height: inherit;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+grid,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+nav,
+noscript,
+object,
+ol,
+output,
+p,
+pre,
+q,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    cursor: url('pointer.cur'), auto !important;
+    color: var(--link);
+}
+
+button {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    border: 4px solid #1a1a1a;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: 0.075em;
+    line-height: 98%;
+    padding: 1.125em 2.25em;
+    width: auto;
+    cursor: url('pointer.cur'), auto !important;
+}
+
+button:hover {
+    background-color: var(--link);
+    transition: background-color 0.3s ease-out;
+}
+
+h1 {
+    font-size: 3.25rem;
+    color: var(--darkgrey);
+    letter-spacing: 0.015em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.25em 4em;
+    align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 1.25em;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.item-l {
+    grid-column-start: 1;
+}
+
+.item-r {
+    grid-column-start: 4;
+    justify-self: end;
+    align-self: center;
+}
+
+#my-store-50722049 {
+    max-width: 80vw !important;
+    margin: 0 auto !important;
+}
+
+footer {
+    background-color: var(--darkgrey);
+    color: var(--white);
+    padding: 2em;
+    text-align: center;
+}
+
+video {
+    object-fit: cover;
+    width: 40vw;
+    height: auto;
+    text-align: center;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    video {
+        width: 100%;
+    }
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser {
+    background: none !important;
+}
+
+.product-details-module__btn-more ec-link {
+    cursor: url('pointer.cur'), auto !important;
+}
+
+html#ecwid_html body#ecwid_body .ec-size .ec-store .ec-link--muted,
+html#ecwid_html body#ecwid_body .ec-size .ec-store .ec-link--muted:visited {
+    color: var(--link) !important;
+}
